@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- =============================
+             PRESET TIME BUTTONS
+        ============================== -->
+        <div class="upper">
+            <button class="preset-btn active" data-time="30">Default</button>
+            <button class="preset-btn" data-time="300">5 min</button>
+            <button class="preset-btn" data-time="600">10 min</button>
+        </div>
+
+
+        <!-- =============================
+             MAIN TIMER SECTION
+        ============================== -->
+        <div class="main">
+
+            <div class="timer-div">
+
+                <!-- Digital Timer -->
+                <div class="digital-timer">
+                    <p class="timer-text">Timer</p>
+                    <p class="timer">00:00</p>
+                    <button class="timer-button">Start</button>
+                </div>
+
+
+                <!-- Circular Progress -->
+                <div class="progress-circle">
+
+                    <svg class="progress-div" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="32"></circle>
+                        <circle class="ring-progress" id="progressRing" cx="50" cy="50" r="32"></circle>
+                    </svg>
+
+                    <!-- Play / Pause Button -->
+                    <div class="inner-circle">
+                        <button class="btn">
+
+                            <div class="icon-box">
+
+                                <!-- Play Icon -->
+                                <svg class="play-icon" viewBox="0 0 24 24">
+                                    <path d="M6 20.1957V3.80421C6 3.01878 6.86395 2.53993 7.53 2.95621L20.6432 11.152C21.2699 11.5436 21.2699 12.4563 20.6432 12.848L7.53 21.0437C6.86395 21.46 6 20.9812 6 20.1957Z"/>
+                                </svg>
+
+                                <!-- Pause Icon -->
+                                <svg class="pause-icon" viewBox="0 0 24 24">
+                                    <path d="M5 3H10V21H5V3ZM14 3H19V21H14V3Z"/>
+                                </svg>
+
+                            </div>
+
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- =============================
+             Bottom Decorative Bar
+        ============================== -->
+        <div class="lower">
+            <div class="show-bar"></div>
+        </div>
+
+    </div>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
